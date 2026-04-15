@@ -1,0 +1,56 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  --cream: #fff8eb;
+  --cloud: #fffdf8;
+  --ink: #5f566d;
+  --heading: #3d3452;
+  --pink: #ffd8e6;
+  --blue: #ccecff;
+  --mint: #d8f7e7;
+  --yellow: #fff0b8;
+  --peach: #ffe0c7;
+  --lilac: #e9ddff;
+  --rose: #ff8fb3;
+  --shadow: 0 24px 70px rgba(109, 91, 130, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: 'Nunito', sans-serif;
+  background: var(--cream);
+}
+
+button,
+a,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
