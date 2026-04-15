@@ -6,8 +6,9 @@
   venue = 'Venue coming soon',
   contactNumbers = ['9024443290'],
   mapQuery = venue,
+  mapLink = 'https://maps.app.goo.gl/yR3GDiRfuUpdvd3b7',
 }) {
-  const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
+  const locationLink = mapLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
   const rsvpMessage = encodeURIComponent(
     `Namaste 🙏  
 Humein ${babyName} ke ${eventName} ka pyaara sa invitation mila, dil se dhanyavaad 💛  
@@ -50,7 +51,7 @@ Milte hain jaldi hi celebration mein 🎉`
       </div>
 
       <div className="invitation-actions">
-        <a className="secondary-button" href={mapLink} target="_blank" rel="noreferrer">
+        <a className="secondary-button" href={locationLink} target="_blank" rel="noreferrer">
           Open Location
         </a>
         {contactNumbers.map((number, index) => (
@@ -79,3 +80,6 @@ Milte hain jaldi hi celebration mein 🎉`
 }
 
 export default InvitationDetails;
+
+
+

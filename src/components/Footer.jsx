@@ -7,8 +7,9 @@
   parentsName = 'Indraj & Pinky',
   contactNumbers = ['9024443290'],
   mapQuery = venue,
+  mapLink,
 }) {
-  const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
+  const locationLink = mapLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
   const whatsappText = encodeURIComponent(
     `Namaste 🙏 ${babyName} ke ${eventName} ke invitation ke liye dhanyavaad. Hum zaroor aayenge 💛`
   );
@@ -51,7 +52,7 @@
           </a>
         ))}
 
-        <a href={mapLink} target="_blank" rel="noreferrer">
+        <a href={locationLink} target="_blank" rel="noreferrer">
           📍 View Location
         </a>
       </div>
@@ -64,3 +65,6 @@
 }
 
 export default Footer;
+
+
+

@@ -1,13 +1,17 @@
 ﻿import babyPhoto from '../assets/sanvi.jpeg';
 import babyPhoto2 from '../assets/sanvi-2.jpeg';
+import babyPhoto3 from '../assets/sanvi-3.jpeg';
+import babyPhoto4 from '../assets/sanvi-4.jpeg';
+import babyPhoto5 from '../assets/sanvi-5.jpeg';
+import babyPhoto6 from '../assets/sanvi-6.jpeg';
 
 const galleryPhotos = [
   { src: babyPhoto, title: 'Peaceful Sleep', color: 'peach' },
   { src: babyPhoto2, title: 'Tiny Blessing', color: 'mint' },
-  { src: babyPhoto, title: 'Cuddle Time', color: 'blue' },
-  { src: babyPhoto2, title: 'Sweet Expressions', color: 'yellow' },
-  { src: babyPhoto, title: 'Little Angel', color: 'pink' },
-  { src: babyPhoto2, title: 'One Month of Love', color: 'lilac' },
+  { src: babyPhoto3, title: 'Cuddle Time', color: 'blue' },
+  { src: babyPhoto4, title: 'Sweet Expressions', color: 'yellow' },
+  { src: babyPhoto5, title: 'Little Angel', color: 'pink' },
+  { src: babyPhoto6, title: 'One Month of Love', color: 'lilac' },
 ];
 
 function Gallery() {

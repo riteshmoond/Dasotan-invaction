@@ -5,6 +5,7 @@ import InvitationDetails from './components/InvitationDetails';
 import FamilySection from './components/FamilySection';
 import ProgramSchedule from './components/ProgramSchedule';
 import Gallery from './components/Gallery';
+import FunnyMoments from './components/FunnyMoments';
 import Wishes from './components/Wishes';
 import MusicButton from './components/MusicButton';
 import Footer from './components/Footer';
@@ -21,6 +22,7 @@ function App() {
     parentsName: 'indraj & pinky',
     contactNumbers: ['9024443290', '9257479576'],
     mapQuery: 'bagdiya hause, bhagtpura',
+    mapLink: 'https://maps.app.goo.gl/yR3GDiRfuUpdvd3b7',
   };
 
   return (
@@ -33,6 +35,7 @@ function App() {
       <FamilySection {...invitation} />
       <ProgramSchedule />
       <Gallery />
+      <FunnyMoments />
       <Wishes />
       <Footer {...invitation} />
     </main>
@@ -40,3 +43,5 @@ function App() {
 }
 
 export default App;
+
+
