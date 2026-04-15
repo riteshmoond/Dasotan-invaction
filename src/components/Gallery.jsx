@@ -1,12 +1,13 @@
-﻿import guduPhoto from '../assets/gudu.jpeg';
+﻿import babyPhoto from '../assets/sanvi.jpeg';
+import babyPhoto2 from '../assets/sanvi-2.jpeg';
 
-const moments = [
-  { title: 'Sweet Smile', color: 'peach' },
-  { title: 'Little Star', color: 'mint' },
-  { title: 'Tiny Blessing', color: 'blue' },
-  { title: 'Cute Moment', color: 'yellow' },
-  { title: 'Family Joy', color: 'pink' },
-  { title: 'Gudu Love', color: 'lilac' },
+const galleryPhotos = [
+  { src: babyPhoto, title: 'Sweet Smile', color: 'peach' },
+  { src: babyPhoto2, title: 'Little Star', color: 'mint' },
+  { src: babyPhoto, title: 'Tiny Blessing', color: 'blue' },
+  { src: babyPhoto2, title: 'Cute Moment', color: 'yellow' },
+  { src: babyPhoto, title: 'Family Joy', color: 'pink' },
+  { src: babyPhoto2, title: 'Sanvi Love', color: 'lilac' },
 ];
 
 function Gallery() {
@@ -15,13 +16,13 @@ function Gallery() {
       <p className="eyebrow">Baby moments</p>
       <h2>A Gallery of Sweet Memories</h2>
       <p className="section-intro">
-        Gudu ki pyaari photo moments jo humesha hamare dil ko khush karte hain. Har photo ek chhoti si kahani batati hai, ek chhota sa pal jo humein hamesha yaad rahega.
+        Sanvi ki pyaari photo moments jo humesha hamare dil ko khush karte hain. Har photo ek chhoti si kahani batati hai, ek chhota sa pal jo humein hamesha yaad rahega.
       </p>
       <div className="gallery-grid photo-gallery-grid">
-        {moments.map((moment) => (
-          <article className={`gallery-card photo-gallery-card ${moment.color}`} key={moment.title}>
-            <img src={guduPhoto} alt={moment.title} />
-            <h3>{moment.title}</h3>
+        {galleryPhotos.map((photo) => (
+          <article className={`gallery-card photo-gallery-card ${photo.color}`} key={photo.title}>
+            <img src={photo.src} alt={photo.title} />
+            <h3>{photo.title}</h3>
           </article>
         ))}
       </div>

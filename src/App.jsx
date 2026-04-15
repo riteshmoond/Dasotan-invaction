@@ -6,14 +6,14 @@ import FamilySection from './components/FamilySection';
 import ProgramSchedule from './components/ProgramSchedule';
 import Gallery from './components/Gallery';
 import Wishes from './components/Wishes';
-import ShareBar from './components/ShareBar';
+// import ShareBar from './components/ShareBar';
 import MusicButton from './components/MusicButton';
 import Footer from './components/Footer';
 import './App.css';
 
 function App() {
   const invitation = {
-    babyName: 'gudu',
+    babyName: 'sanvi',
     eventName: 'Dasotan',
     date: '19 April 2026',
     time: '01:00 PM',
@@ -36,7 +36,7 @@ function App() {
       <ProgramSchedule />
       <Gallery />
       <Wishes />
-      <ShareBar {...invitation} />
+      {/* <ShareBar {...invitation} /> */}
       <Footer {...invitation} />
     </main>
   );

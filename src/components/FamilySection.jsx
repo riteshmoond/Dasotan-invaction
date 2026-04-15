@@ -1,4 +1,4 @@
-﻿function FamilySection({ babyName = 'gudu', eventName = 'Dasotan', parentsName = 'indraj & pinky' }) {
+﻿function FamilySection({ babyName = 'sanvi', eventName = 'Dasotan', parentsName = 'indraj & pinky' }) {
   return (
     <section className="section-shell family-section" id="family">
       <div className="family-card">
@@ -18,3 +18,4 @@
 }
 
 export default FamilySection;
+

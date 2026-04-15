@@ -1,6 +1,6 @@
 ﻿const schedule = [
   { time: '01:00 PM', title: 'Guest Welcome', note: 'Pyaar bhara swagat aur family greetings.' },
-  { time: '01:30 PM', title: 'Dasotan Ceremony', note: 'Blessings and traditional ceremony for gudu.' },
+  { time: '01:30 PM', title: 'Dasotan Ceremony', note: 'Blessings and traditional ceremony for sanvi.' },
   { time: '02:30 PM', title: 'Lunch', note: 'Family ke saath tasty lunch and sweet moments.' },
   { time: '03:30 PM', title: 'Photos & Wishes', note: 'Memories, photos, wishes aur lots of smiles.' },
 ];
@@ -26,3 +26,4 @@ function ProgramSchedule() {
 }
 
 export default ProgramSchedule;
+

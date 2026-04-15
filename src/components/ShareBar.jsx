@@ -1,6 +1,6 @@
 ﻿import { useState } from 'react';
 
-function ShareBar({ babyName = 'gudu', eventName = 'Dasotan', date = '19 April 2026', time = '01:00 PM', venue = '' }) {
+function ShareBar({ babyName = 'sanvi', eventName = 'Dasotan', date = '19 April 2026', time = '01:00 PM', venue = '' }) {
   const [status, setStatus] = useState('');
 
   const shareText = `${babyName}'s ${eventName} Invitation\nDate: ${date}\nTime: ${time}\nVenue: ${venue}`;
@@ -43,3 +43,4 @@ function ShareBar({ babyName = 'gudu', eventName = 'Dasotan', date = '19 April 2
 }
 
 export default ShareBar;
+

@@ -1,4 +1,4 @@
-﻿import guduPhoto from '../assets/gudu.jpeg';
+﻿import babyPhoto from '../assets/sanvi.jpeg';
 
 const floatingItems = [
   { label: 'cloud', symbol: '☁', className: 'float-cloud float-one' },
@@ -10,7 +10,6 @@ const floatingItems = [
 function Home({ babyName = 'Baby', eventName = 'First Month Celebration' }) {
   return (
     <section className="home-section section-shell" id="home">
-      
       <div className="floating-sky" aria-hidden="true">
         {floatingItems.map((item) => (
           <span key={item.label} className={item.className}>
@@ -42,7 +41,7 @@ function Home({ babyName = 'Baby', eventName = 'First Month Celebration' }) {
         <div className="sun-dot" />
 
         <div className="baby-photo-frame">
-          <img src={guduPhoto} alt={`${babyName}`} className="baby-photo" />
+          <img src={babyPhoto} alt={babyName} className="baby-photo" />
         </div>
 
         <div className="crib">
@@ -55,7 +54,6 @@ function Home({ babyName = 'Baby', eventName = 'First Month Celebration' }) {
           30 days of love, tiny smiles, and a lifetime of happiness has just begun.
         </p>
       </div>
-
     </section>
   );
 }

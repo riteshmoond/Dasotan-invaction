@@ -16,7 +16,7 @@ const getTimeLeft = (eventDateTime) => {
   };
 };
 
-function Countdown({ babyName = 'gudu', eventName = 'Dasotan', eventDateTime }) {
+function Countdown({ babyName = 'sanvi', eventName = 'Dasotan', eventDateTime }) {
   const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(eventDateTime));
 
   useEffect(() => {
@@ -55,3 +55,4 @@ function Countdown({ babyName = 'gudu', eventName = 'Dasotan', eventDateTime }) 
 }
 
 export default Countdown;
+

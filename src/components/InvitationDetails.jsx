@@ -1,6 +1,4 @@
-﻿import { useState } from 'react';
-
-function InvitationDetails({
+﻿function InvitationDetails({
   babyName = 'Baby',
   eventName = 'Celebration',
   date = 'Date coming soon',
@@ -9,11 +7,9 @@ function InvitationDetails({
   rsvpNumber = '9257479576',
   mapQuery = venue,
 }) {
-  const [rsvp, setRsvp] = useState({ name: '', guests: '1', note: '' });
   const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
-
   const rsvpMessage = encodeURIComponent(
-    `Namaste, hum ${babyName} ke ${eventName} mein aa rahe hain.\nName: ${rsvp.name || 'Guest'}\nGuests: ${rsvp.guests}\nMessage: ${rsvp.note || 'Blessings and best wishes!'}`
+    `Namaste, hum ${babyName} ke ${eventName} mein aane ke liye excited hain. Blessings and best wishes!`
   );
 
   return (
@@ -53,40 +49,19 @@ function InvitationDetails({
         </a>
       </div>
 
-      <div className="rsvp-card enhanced-rsvp-card">
+      <div className="rsvp-card enhanced-rsvp-card simple-rsvp-card">
         <div>
           <h3>RSVP on WhatsApp</h3>
-          <p>Name aur guest count fill karo, WhatsApp message ready ho jayega.</p>
+          <p>Aap apni attendance confirm karne ke liye WhatsApp par RSVP bhej sakte hain. Hum aapke response ka intezaar kar rahe hain! Aapke pyaar aur support ke liye shukriya.</p>
         </div>
-        <form className="rsvp-form">
-          <input
-            type="text"
-            placeholder="Your name"
-            value={rsvp.name}
-            onChange={(event) => setRsvp({ ...rsvp, name: event.target.value })}
-          />
-          <input
-            min="1"
-            type="number"
-            placeholder="Guests"
-            value={rsvp.guests}
-            onChange={(event) => setRsvp({ ...rsvp, guests: event.target.value })}
-          />
-          <textarea
-            rows="2"
-            placeholder="Short message"
-            value={rsvp.note}
-            onChange={(event) => setRsvp({ ...rsvp, note: event.target.value })}
-          />
-          <a
-            className="primary-button"
-            href={`https://wa.me/91${rsvpNumber}?text=${rsvpMessage}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Send RSVP
-          </a>
-        </form>
+        <a
+          className="primary-button"
+          href={`https://wa.me/91${rsvpNumber}?text=${rsvpMessage}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Send RSVP on WhatsApp
+        </a>
       </div>
     </section>
   );

@@ -635,35 +635,6 @@ h3 {
   align-items: stretch;
 }
 
-.rsvp-form {
-  display: grid;
-  grid-template-columns: 1fr 110px;
-  gap: 10px;
-  min-width: min(430px, 100%);
-}
-
-.rsvp-form textarea,
-.rsvp-form .primary-button {
-  grid-column: 1 / -1;
-}
-
-.rsvp-form input,
-.rsvp-form textarea {
-  width: 100%;
-  border: 2px solid rgba(255, 143, 179, 0.18);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.86);
-  color: var(--heading);
-  outline: none;
-  padding: 13px 15px;
-  resize: vertical;
-}
-
-.rsvp-form input:focus,
-.rsvp-form textarea:focus {
-  border-color: rgba(255, 143, 179, 0.75);
-  box-shadow: 0 0 0 4px rgba(255, 143, 179, 0.13);
-}
 
 .family-section {
   display: grid;
@@ -814,19 +785,18 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .schedule-card,
-  .rsvp-form {
+  .schedule-card {
     grid-template-columns: 1fr;
-  }
-
-  .rsvp-form textarea,
-  .rsvp-form .primary-button {
-    grid-column: auto;
   }
 
   .invitation-actions,
   .share-actions {
     flex-direction: column;
   }
+}
+
+
+.simple-rsvp-card .primary-button {
+  flex: 0 0 auto;
 }
 

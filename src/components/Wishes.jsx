@@ -1,6 +1,6 @@
 ﻿import { useEffect, useState } from 'react';
 
-const wishesStorageKey = 'gudu-dasotan-wishes';
+const wishesStorageKey = 'sanvi-dasotan-wishes';
 
 const starterWishes = [
   { name: 'Nani & Nana', message: 'May your days always be full of laughter and love.' },
@@ -101,3 +101,4 @@ function Wishes() {
 }
 
 export default Wishes;
+
