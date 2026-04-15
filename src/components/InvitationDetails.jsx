@@ -9,7 +9,15 @@
 }) {
   const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
   const rsvpMessage = encodeURIComponent(
-    `Namaste, hum ${babyName} ke ${eventName} mein aane ke liye excited hain. Blessings and best wishes!`
+    `Namaste 🙏  
+Humein ${babyName} ke ${eventName} ka pyaara sa invitation mila, dil se dhanyavaad 💛  
+
+Hum is khubsurat mauke par shamil hone ke liye bahut excited hain.  
+Chhote se little star ko humari taraf se dher saara pyaar, aashirwad aur best wishes ✨👶  
+
+Bhagwan kare ${babyName} hamesha khush rahe, swasth rahe aur apni pyari muskaan se sabka dil jeetta rahe 😊  
+
+Milte hain jaldi hi celebration mein 🎉`
   );
   const primaryNumber = contactNumbers[0];
 
