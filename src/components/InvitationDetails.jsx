@@ -4,13 +4,14 @@
   date = 'Date coming soon',
   time = 'Time coming soon',
   venue = 'Venue coming soon',
-  rsvpNumber = '9257479576',
+  contactNumbers = ['9024443290'],
   mapQuery = venue,
 }) {
   const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
   const rsvpMessage = encodeURIComponent(
     `Namaste, hum ${babyName} ke ${eventName} mein aane ke liye excited hain. Blessings and best wishes!`
   );
+  const primaryNumber = contactNumbers[0];
 
   return (
     <section className="section-shell invitation-section" id="invitation">
@@ -44,9 +45,11 @@
         <a className="secondary-button" href={mapLink} target="_blank" rel="noreferrer">
           Open Location
         </a>
-        <a className="secondary-button" href={`tel:+91${rsvpNumber}`}>
-          Call: +91 {rsvpNumber}
-        </a>
+        {contactNumbers.map((number, index) => (
+          <a className="secondary-button" href={`tel:+91${number}`} key={number}>
+            Call {index + 1}: +91 {number}
+          </a>
+        ))}
       </div>
 
       <div className="rsvp-card enhanced-rsvp-card simple-rsvp-card">
@@ -56,7 +59,7 @@
         </div>
         <a
           className="primary-button"
-          href={`https://wa.me/91${rsvpNumber}?text=${rsvpMessage}`}
+          href={`https://wa.me/91${primaryNumber}?text=${rsvpMessage}`}
           target="_blank"
           rel="noreferrer"
         >

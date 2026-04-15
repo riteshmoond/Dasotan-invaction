@@ -5,7 +5,7 @@
   time = '01:00 PM',
   venue = 'Bagdiya House, Bhagatpura',
   parentsName = 'Indraj & Pinky',
-  contactNumber = '9257479576',
+  contactNumbers = ['9024443290'],
   mapQuery = venue,
 }) {
   const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
@@ -15,12 +15,10 @@
 
   return (
     <footer className="footer-section">
-
       <h2>Thank You for Your Love & Blessings 💛</h2>
 
       <p className="footer-message">
-        Aapki upasthiti hamare liye sabse bada tohfa hai.  
-        Hum aasha karte hain ki aap {babyName} ke is khaas din par zaroor shamil honge.
+        Aapki upasthiti hamare liye sabse bada tohfa hai. Hum aasha karte hain ki aap {babyName} ke is khaas din par zaroor shamil honge.
       </p>
 
       <p className="footer-family">With love, {parentsName}</p>
@@ -36,27 +34,31 @@
       <p className="footer-venue">📍 {venue}</p>
 
       <div className="footer-links">
-        <a href={`tel:+91${contactNumber}`}>
-          📞 Call: +91 {contactNumber}
-        </a>
+        {contactNumbers.map((number, index) => (
+          <a href={`tel:+91${number}`} key={`call-${number}`}>
+            📞 Call {index + 1}: +91 {number}
+          </a>
+        ))}
 
-        <a
-          href={`https://wa.me/91${contactNumber}?text=${whatsappText}`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          💬 WhatsApp
-        </a>
+        {contactNumbers.map((number, index) => (
+          <a
+            href={`https://wa.me/91${number}?text=${whatsappText}`}
+            target="_blank"
+            rel="noreferrer"
+            key={`whatsapp-${number}`}
+          >
+            💬 WhatsApp {index + 1}
+          </a>
+        ))}
 
         <a href={mapLink} target="_blank" rel="noreferrer">
           📍 View Location
         </a>
       </div>
 
-     <p className="footer-note">
-  Made with 💛 by <span className="footer-name">Ritesh Chachu</span> ✨
-</p>
-
+      <p className="footer-note">
+        Made with 💛 by <span className="footer-name">Ritesh Chachu</span> ✨
+      </p>
     </footer>
   );
 }

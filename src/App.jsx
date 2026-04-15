@@ -1,5 +1,4 @@
-﻿import { useState } from 'react';
-import Home from './components/Home';
+﻿import Home from './components/Home';
 import Timeline from './components/Timeline';
 import Countdown from './components/Countdown';
 import InvitationDetails from './components/InvitationDetails';
@@ -11,7 +10,6 @@ import MusicButton from './components/MusicButton';
 import Footer from './components/Footer';
 import './App.css';
 
-
 function App() {
   const invitation = {
     babyName: 'sanvi',
@@ -21,8 +19,7 @@ function App() {
     eventDateTime: '2026-04-19T13:00:00+05:30',
     venue: 'bagdiya hause, bhagtpura',
     parentsName: 'indraj & pinky',
-    rsvpNumber: '9257479576',
-    contactNumber: '9257479576',
+    contactNumbers: ['9024443290', '9257479576'],
     mapQuery: 'bagdiya hause, bhagtpura',
   };
 
@@ -41,6 +38,5 @@ function App() {
     </main>
   );
 }
-
 
 export default App;
