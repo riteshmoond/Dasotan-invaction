@@ -3,10 +3,10 @@
 const wishesStorageKey = 'sanvi-dasotan-wishes';
 
 const starterWishes = [
-  { name: 'Nani & Nana', message: 'May your days always be full of laughter and love.' },
-  { name: 'bhuaa & fhufha ', message: 'Wishing you a lifetime of happiness and success.' },
-  { name: 'Parents', message: 'Congratulations on the arrival of your precious little one!' },
-  { name: 'Family Friends', message: 'Blessings for a bright, beautiful, and joyful life.' },
+  { name: 'Nani & Nana', message: 'Hamari pyari si gudiya hamesha hasti rahe aur khushiyon se bhari rahe 💛' },
+  { name: 'Buaa & Fufha', message: 'Bhagwan kare tumhari life hamesha love aur happiness se full rahe 🌸' },
+  { name: 'Parents', message: 'Hamari nanhi pari hamari life ki sabse beautiful blessing hai ❤️' },
+  { name: 'Family Friends', message: 'Sanvi ki life hamesha smiles, love aur cute moments se bhari rahe ✨' },
 ];
 
 const getWishKey = (wish) => `${wish.name.trim().toLowerCase()}-${wish.message.trim().toLowerCase()}`;
@@ -14,7 +14,7 @@ const getWishKey = (wish) => `${wish.name.trim().toLowerCase()}-${wish.message.t
 const mergeWishes = (savedWishes = []) => {
   const wishesByKey = new Map();
 
-  [...savedWishes, ...starterWishes].forEach((wish) => {
+  starterWishes.forEach((wish) => {
     if (!wish?.name || !wish?.message) return;
     wishesByKey.set(getWishKey(wish), wish);
   });
@@ -62,7 +62,10 @@ function Wishes() {
   return (
     <section className="section-shell wishes-section" id="wishes">
       <p className="eyebrow">Guest wishes</p>
-      <h2>Leave a Sweet Note</h2>
+      <h2>Send Your Blessings to Sanvi</h2>
+      <p className="section-intro">
+        Aap apne pyaar bhare wishes aur blessings yahan share kar sakte hain. Har ek message hamare liye bahut special hoga, aur Sanvi ke liye ek khoobsurat yaadgar ban jayega.
+      </p>
       <div className="wishes-layout">
         <form className="wish-form" onSubmit={handleSubmit}>
           <label htmlFor="guest-name">Your name</label>
