@@ -1,4 +1,5 @@
-﻿import Home from './components/Home';
+﻿import { useState } from 'react';
+import Home from './components/Home';
 import Timeline from './components/Timeline';
 import Countdown from './components/Countdown';
 import InvitationDetails from './components/InvitationDetails';
@@ -6,10 +7,10 @@ import FamilySection from './components/FamilySection';
 import ProgramSchedule from './components/ProgramSchedule';
 import Gallery from './components/Gallery';
 import Wishes from './components/Wishes';
-// import ShareBar from './components/ShareBar';
 import MusicButton from './components/MusicButton';
 import Footer from './components/Footer';
 import './App.css';
+
 
 function App() {
   const invitation = {
@@ -36,10 +37,10 @@ function App() {
       <ProgramSchedule />
       <Gallery />
       <Wishes />
-      {/* <ShareBar {...invitation} /> */}
       <Footer {...invitation} />
     </main>
   );
 }
+
 
 export default App;

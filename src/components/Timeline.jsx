@@ -1,7 +1,7 @@
 ﻿const milestones = [
   {
     icon: '🌙',
-    date: '18 March 2026',
+    date: '17 March 2026',
     title: 'A Star Arrived',
     text: 'Our home was filled with the softest cry and endless happiness.',
   },

@@ -678,6 +678,19 @@ h3 {
   font-size: 1.8rem;
   line-height: 1.1;
 }
+.family-message {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.family-subtext {
+  margin-top: 10px;
+  color: #777;
+}
+
+.family-icon {
+  font-size: 2rem;
+}
 
 .schedule-list {
   display: grid;
@@ -704,27 +717,27 @@ h3 {
   text-align: center;
 }
 
-.photo-gallery-card {
-  min-height: 280px;
-  padding: 0;
-  background: rgba(255, 255, 255, 0.7);
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 16px;
 }
 
-.photo-gallery-card::before,
-.photo-gallery-card span {
-  display: none;
-}
-
-.photo-gallery-card img {
+.image-wrapper img {
   width: 100%;
-  height: 220px;
-  display: block;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.photo-gallery-card:hover img {
+  transform: scale(1.08);
 }
 
 .photo-gallery-card h3 {
-  padding: 18px 20px 20px;
+  margin-top: 10px;
+  font-size: 1rem;
 }
+
 
 .share-section {
   text-align: center;
@@ -800,3 +813,61 @@ h3 {
   flex: 0 0 auto;
 }
 
+.footer-message {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.footer-family {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.footer-venue {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  display: inline-block;
+  margin: 5px 10px;
+}
+
+.footer-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.footer-note {
+  margin-top: 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #777;
+  letter-spacing: 0.5px;
+}
+
+.footer-name {
+  color: #ff8fab;
+  font-weight: 700;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+/* underline glow effect */
+.footer-name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #ff8fab;
+  border-radius: 10px;
+}
+
+/* subtle hover effect */
+.footer-name:hover {
+  color: #ff4d6d;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
