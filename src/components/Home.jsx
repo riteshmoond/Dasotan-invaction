@@ -19,16 +19,17 @@ function Home({ babyName = 'Baby', eventName = 'First Month Celebration' }) {
       </div>
 
       <div className="home-copy">
-        <p className="eyebrow">One Month of Pure Love</p>
+        <p className="eyebrow">Sanvi Ke 30 Din: Full On Masti & Pyaar!</p>
 
         <h1>
-          Welcome to <span className="highlight">{babyName}</span>'s First Month Celebration
+          Swagat hai <span className="highlight">{babyName}</span> ki First Month Party mein!
         </h1>
 
         <p className="home-message">
-          Our little bundle of joy has completed one beautiful month.
-          Join us to celebrate {babyName}'s {eventName} filled with love,
-          blessings, cuddles, and the sweetest little moments.
+          Arre arre! Hamari choti si Sanvi ne apne zindagi ke pehle 30 din <b>full swag</b> ke saath complete kar liye hain!<br/>
+          Aap sabhi ko invite karte hain ek <b>dhamakedaar Dasotan party</b> mein – jahan pyaar bhi milega, blessings bhi, aur cuddles toh unlimited hain!<br/>
+          Milke celebrate karte hain Sanvi ki cuteness, uski naughty smiles, aur woh sab funny moments jo humesha yaad rahenge.<br/>
+          <span style={{color: '#e67e22'}}>Mummy-Papa ki taraf se – “Warning: Overload of sweetness ho sakta hai!” 😄</span>
         </p>
 
         <div className="home-actions">
@@ -51,7 +52,7 @@ function Home({ babyName = 'Baby', eventName = 'First Month Celebration' }) {
         </div>
 
         <p>
-          30 days of love, tiny smiles, and a lifetime of happiness has just begun.
+          30 din ki masti, choti smiles, aur abhi toh party shuru hui hai!
         </p>
       </div>
     </section>
