@@ -14,7 +14,7 @@ const getWishKey = (wish) => `${wish.name.trim().toLowerCase()}-${wish.message.t
 const mergeWishes = (savedWishes = []) => {
   const wishesByKey = new Map();
 
-  starterWishes.forEach((wish) => {
+  [...starterWishes, ...savedWishes].forEach((wish) => {
     if (!wish?.name || !wish?.message) return;
     wishesByKey.set(getWishKey(wish), wish);
   });

@@ -622,6 +622,36 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
+/* FIXES */
+
+.countdown-grid {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.image-wrapper {
+  height: 200px;
+}
+
+.home-copy {
+  width: 100%;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 6.9rem);
+}
+
+.primary-button:active,
+.secondary-button:active {
+  transform: scale(0.96);
+}
+
+.gallery-card:hover,
+.timeline-card:hover,
+.detail-card:hover {
+  transform: translateY(-6px);
+  transition: 0.3s;
+}
+
 
 .invitation-actions,
 .share-actions {
@@ -977,4 +1007,215 @@ h3 {
 
 .funny-card:hover {
   transform: translateY(-5px);
+}
+
+/* Gallery and funny moments polish */
+.gallery-section,
+.funny-section {
+  overflow: hidden;
+}
+
+.photo-gallery-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.photo-gallery-card {
+  grid-column: span 2;
+  min-height: 340px;
+  padding: 12px;
+  justify-content: stretch;
+  border-color: rgba(255, 255, 255, 0.92);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.34)),
+    var(--card-tint, #fff);
+  box-shadow: 0 20px 46px rgba(96, 80, 117, 0.14);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.photo-gallery-card.featured-memory {
+  grid-column: span 4;
+}
+
+.photo-gallery-card::before {
+  inset: 10px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.72);
+  border-radius: 24px;
+  pointer-events: none;
+}
+
+.photo-gallery-card.peach { --card-tint: linear-gradient(135deg, #ffe0c7, #fff7e8); }
+.photo-gallery-card.mint { --card-tint: linear-gradient(135deg, #d8f7e7, #f7fff8); }
+.photo-gallery-card.blue { --card-tint: linear-gradient(135deg, #ccecff, #f8fdff); }
+.photo-gallery-card.yellow { --card-tint: linear-gradient(135deg, #fff0b8, #fffaf0); }
+.photo-gallery-card.pink { --card-tint: linear-gradient(135deg, #ffd8e6, #fff7fb); }
+.photo-gallery-card.lilac { --card-tint: linear-gradient(135deg, #e9ddff, #fbf8ff); }
+
+.photo-gallery-card .image-wrapper {
+  position: relative;
+  z-index: 1;
+  height: auto;
+  flex: 1;
+  min-height: 230px;
+  border-radius: 22px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.78);
+}
+
+.featured-memory .image-wrapper {
+  min-height: 360px;
+}
+
+.photo-card-copy {
+  position: relative;
+  z-index: 1;
+  padding: 16px 10px 6px;
+  text-align: center;
+}
+
+.photo-card-copy span,
+.video-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.84);
+  color: #9b6378;
+  box-shadow: 0 10px 22px rgba(96, 80, 117, 0.1);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.photo-card-copy span {
+  margin-bottom: 8px;
+  padding: 7px 11px;
+}
+
+.photo-card-copy h3,
+.funny-card-copy h3 {
+  margin-bottom: 6px;
+}
+
+.photo-card-copy p {
+  margin: 0;
+  color: #7a7185;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.funny-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.funny-card {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-color: rgba(255, 255, 255, 0.92);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.56)),
+    linear-gradient(135deg, rgba(255, 216, 230, 0.64), rgba(204, 236, 255, 0.5));
+  box-shadow: 0 20px 46px rgba(96, 80, 117, 0.14);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.funny-card:first-child,
+.funny-card:nth-child(2) {
+  grid-column: span 3;
+}
+
+.video-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(255, 216, 230, 0.9), rgba(204, 236, 255, 0.88));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.76);
+}
+
+.video-frame video {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  display: block;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.funny-card:first-child .video-frame video,
+.funny-card:nth-child(2) .video-frame video {
+  aspect-ratio: 16 / 10;
+}
+
+.video-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 8px 12px;
+}
+
+.funny-card-copy {
+  padding: 18px 8px 6px;
+}
+
+.funny-card-copy p {
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.photo-gallery-card:hover,
+.funny-card:hover {
+  box-shadow: 0 26px 58px rgba(96, 80, 117, 0.18);
+}
+
+@media (max-width: 900px) {
+  .photo-gallery-grid,
+  .funny-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photo-gallery-card,
+  .photo-gallery-card.featured-memory,
+  .funny-card,
+  .funny-card:first-child,
+  .funny-card:nth-child(2) {
+    grid-column: auto;
+  }
+
+  .featured-memory .image-wrapper {
+    min-height: 280px;
+  }
+
+  .funny-card:first-child .video-frame video,
+  .funny-card:nth-child(2) .video-frame video {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+@media (max-width: 640px) {
+  .photo-gallery-grid,
+  .funny-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .photo-gallery-card {
+    min-height: 0;
+  }
+
+  .photo-gallery-card .image-wrapper,
+  .featured-memory .image-wrapper {
+    min-height: 260px;
+  }
+
+  .photo-card-copy,
+  .funny-card-copy {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
 }

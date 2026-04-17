@@ -12,18 +12,18 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
-  const invitation = {
-    babyName: 'sanvi',
-    eventName: 'Dasotan',
-    date: '19 April 2026',
-    time: '01:00 PM',
-    eventDateTime: '2026-04-19T13:00:00+05:30',
-    venue: 'bagdiya hause, bhagtpura',
-    parentsName: 'indraj & pinky',
-    contactNumbers: ['9024443290', '9257479576'],
-    mapQuery: 'bagdiya hause, bhagtpura',
-    mapLink: 'https://maps.app.goo.gl/yR3GDiRfuUpdvd3b7',
-  };
+ const invitation = {
+  babyName: 'sanvi',
+  eventName: 'Dasotan',
+  date: '19 April 2026',
+  time: '01:00 PM',
+  eventDateTime: '2026-04-19T13:00:00+05:30',
+  venue: 'Bagdiya House, Bhagatpura',
+  parentsName: 'Indraj & Pinky',
+  contactNumbers: ['9024443290', '9257479576'],
+  mapQuery: 'Bagdiya House, Bhagatpura',
+  mapLink: 'https://maps.app.goo.gl/yR3GDiRfuUpdvd3b7',
+};
 
   return (
     <main className="baby-page">

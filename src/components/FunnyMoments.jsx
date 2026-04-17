@@ -8,22 +8,27 @@ const funnyMoments = [
   {
     title: 'Little Movements',
     video: sanviVideo1,
+    caption: 'Sanvi ke chhote chhote moves, aur sabke faces par instant smile.',
   },
   {
     title: 'Sweet Expressions',
     video: sanviVideo2,
+    caption: 'Kabhi serious, kabhi cute - har expression ek memory ban gaya.',
   },
   {
     title: 'Peaceful Moments',
     video: sanviVideo3,
+    caption: 'Soft si shanti, baby wali innocence, aur ghar bhar ka pyaar.',
   },
   {
     title: 'Tiny Stretch',
     video: sanviVideo4,
+    caption: 'Ek tiny stretch aur poori family ka dil melt.',
   },
   {
     title: 'Cute Welcome',
     video: sanviVideo5,
+    caption: 'Sanvi ka cute welcome moment, bilkul celebration jaisa.',
   },
 ];
 
@@ -40,24 +45,26 @@ function FunnyMoments() {
       <h2>Sanvi's First Month Highlights</h2>
 
       <p className="section-intro">
-        Sanvi ke pehle mahine ke kuch pyaare aur yaadgaar pal. Har chhoti si movement aur expression hamare liye ek special memory ban gayi hai.
+        Kuch pal itne cute hote hain ki unhe baar baar dekhne ka mann karta hai.
+        Yeh Sanvi ke wahi tiny, funny aur heart-melting moments hain.
       </p>
 
       <div className="funny-grid">
-        {funnyMoments.map((moment) => (
+        {funnyMoments.map((moment, index) => (
           <article className="funny-card" key={moment.title}>
+            <div className="video-frame">
+              <span className="video-badge">Clip {index + 1}</span>
             <video
               controls
               muted
               playsInline
               preload="metadata"
-              poster={moment.poster}
               onLoadedMetadata={keepVideoMuted}
               onVolumeChange={keepVideoMuted}
             >
               <source src={moment.video} type="video/mp4" />
-              Your browser does not support the video tag.
             </video>
+            </div>
 
             <div className="funny-card-copy">
               <h3>{moment.title}</h3>
